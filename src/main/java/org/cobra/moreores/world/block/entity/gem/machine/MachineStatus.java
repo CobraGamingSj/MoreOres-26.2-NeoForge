@@ -1,0 +1,54 @@
+package org.cobra.moreores.world.block.entity.gem.machine;
+
+import com.mojang.serialization.Codec;
+import net.minecraft.util.StringRepresentable;
+
+public enum MachineStatus implements StringRepresentable {
+    IDLE("stopped"),
+    RUNNING("running"),
+    PAUSED("paused");
+
+    private final String name;
+
+    MachineStatus(String name) {
+        this.name = name;
+    }
+
+    public static final Codec<MachineStatus> CODEC = StringRepresentable.fromValues(MachineStatus::values);
+
+    public boolean isIdle() {
+        return this == IDLE;
+    }
+
+    public boolean isRunning() {
+        return this == RUNNING;
+    }
+
+    public boolean isPaused() {
+        return this == PAUSED;
+    }
+
+    @Override
+    public String getSerializedName() {
+        return this.name;
+    }
+
+    public enum EnergyState implements StringRepresentable {
+        IDLE("off"),
+        INSERTING("inserting"),
+        EXTRACTING("extracting");
+
+        private final String name;
+
+        EnergyState(String name) {
+            this.name = name;
+        }
+
+        public static final Codec<EnergyState> CODEC = StringRepresentable.fromValues(EnergyState::values);
+
+        @Override
+        public String getSerializedName() {
+            return this.name;
+        }
+    }
+}

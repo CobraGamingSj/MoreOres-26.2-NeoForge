@@ -1,0 +1,7 @@
+{
+  "type": "moreores:gem_purifying",
+  "ingredientGem": "moreores:raw_pyrope",
+  "resultGem": {
+    "id": "moreores:pyrope"
+  }
+}

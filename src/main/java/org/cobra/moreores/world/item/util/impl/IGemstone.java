@@ -1,0 +1,31 @@
+package org.cobra.moreores.world.item.util.impl;
+
+
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import org.cobra.moreores.world.item.util.GemCategory;
+
+import java.util.function.Supplier;
+
+public interface IGemstone {
+    String getName();
+    GemCategory category();
+    Supplier<Item[]> items();
+    
+    IGemstone NONE = new IGemstone() {
+        @Override
+        public String getName() {
+            return "empty";
+        }
+
+        @Override
+        public GemCategory category() {
+            return GemCategory.NONE;
+        }
+
+        @Override
+        public Supplier<Item[]> items() {
+            return () -> new Item[]{Items.AIR};
+        }
+    };
+}
