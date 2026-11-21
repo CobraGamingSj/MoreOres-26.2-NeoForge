@@ -196,7 +196,10 @@ public class ModItems {
             s -> ModSmithingTemplateItem.createRadiantUpgrade(s.rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<Item> GUARDIAN_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.registerItem("guardian_armor_trim_smithing_template",
             s -> SmithingTemplateItem.createArmorTrimTemplate(s.rarity(Rarity.RARE)));
-    
+
+    public static final DeferredItem<Item> RADIANT_BOW = ITEMS.registerItem("radiant_bow", s -> new RadiantBowItem(s.durability(1024).enchantable(2).stacksTo(1).fireResistant().rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> GEM_ARROW = ITEMS.registerItem("gem_arrow", s -> new GemArrowItem(s.fireResistant().rarity(Rarity.UNCOMMON)));
+
     public static final DeferredItem<Item> CRYSTAL_OF_ECLIPSE = ITEMS.registerItem("crystal_of_eclipse", settings -> new Item(settings.rarity(Rarity.RARE).fireResistant()));
     public static final DeferredItem<Item> ECLIPSE_GEM = ITEMS.registerItem("eclipse_gem", settings -> new Item(settings.rarity(Rarity.EPIC).fireResistant()));
     

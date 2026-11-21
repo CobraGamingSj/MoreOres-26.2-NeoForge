@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "#moreores:rare/crystallized",
+    "a": "minecraft:arrow"
+  },
+  "pattern": [
+    "###",
+    "#a#",
+    "###"
+  ],
+  "result": {
+    "id": "moreores:gem_arrow"
+  }
+}

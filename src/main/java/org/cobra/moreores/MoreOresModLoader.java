@@ -34,6 +34,7 @@ import org.cobra.moreores.client.gui.screen.GemPurifierScreen;
 import org.cobra.moreores.client.gui.screen.ModMenuType;
 import org.cobra.moreores.client.render.block.entity.GemCrystallizerBlockEntityRenderer;
 import org.cobra.moreores.client.render.block.entity.GemPurifierBlockEntityRenderer;
+import org.cobra.moreores.client.render.item.entity.GemArrowEntityRenderer;
 import org.cobra.moreores.enchantment.entity.effect.EnchantmentEffects;
 import org.cobra.moreores.networking.block.GemMachineButtonHandlingPayload;
 import org.cobra.moreores.networking.block.MachineStatusDataPayload;
@@ -46,6 +47,7 @@ import org.cobra.moreores.recipe.display.ModRecipeDisplays;
 import org.cobra.moreores.village.ModVillagerProfession;
 import org.cobra.moreores.world.block.ModBlocks;
 import org.cobra.moreores.world.block.entity.ModBlockEntityType;
+import org.cobra.moreores.world.entity.ModEntityTypes;
 import org.cobra.moreores.world.item.ModCreativeModeTabs;
 import org.cobra.moreores.world.item.ModItems;
 import org.slf4j.Logger;
@@ -104,6 +106,8 @@ public class MoreOresModLoader {
         ModVillagerProfession.register(schoolBus);
 
         EnchantmentEffects.register(schoolBus);
+
+        ModEntityTypes.register(schoolBus);
         
         schoolBus.addListener(this::addCreative);
     }
@@ -390,6 +394,10 @@ public class MoreOresModLoader {
             ItemStack radPlate = new ItemStack(ModItems.RADIANT_CHESTPLATE.get());
             ItemStack radLgg = new ItemStack(ModItems.RADIANT_LEGGINGS.get());
             ItemStack radBoots = new ItemStack(ModItems.RADIANT_BOOTS.get());
+            ItemStack bow = new ItemStack(Items.BOW);
+            ItemStack radBow = new ItemStack(ModItems.RADIANT_BOW.get());
+            ItemStack arrow = new ItemStack(Items.ARROW);
+            ItemStack gemArrow = new ItemStack(ModItems.GEM_ARROW.get());
 
             event.insertAfter(netSword, rubySword, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(rubySword, sapphireSword, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -408,6 +416,8 @@ public class MoreOresModLoader {
             event.insertAfter(radHelm, radPlate, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(radPlate, radLgg, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(radLgg, radBoots, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(bow, radBow, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(arrow, gemArrow, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
     
@@ -451,6 +461,7 @@ public class MoreOresModLoader {
         public static void registerEntityRenderer(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(ModBlockEntityType.GEM_PURIFIER.get(), GemPurifierBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntityType.GEM_CRYSTALLIZER.get(), GemCrystallizerBlockEntityRenderer::new);
+            event.registerEntityRenderer(ModEntityTypes.GEM_ARROW.get(), GemArrowEntityRenderer::new);
         }
 
         @SubscribeEvent

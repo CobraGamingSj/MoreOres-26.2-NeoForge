@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.Blocks;
 import org.cobra.moreores.MoreOresModLoader;
 import org.cobra.moreores.data.recipes.GemCrystallizerRecipeBuilder;
 import org.cobra.moreores.data.recipes.GemPurifyingRecipeBuilder;
+import org.cobra.moreores.registry.ResourceHelper;
 import org.cobra.moreores.tags.ModItemTags;
 import org.cobra.moreores.world.block.ModBlocks;
 import org.cobra.moreores.world.item.ModItems;
@@ -377,6 +378,24 @@ public class AutomatedRecipeCreator extends RecipeProvider {
                 .define('i', ModItems.GRANDIDIERITE)
                 .unlockedBy(getHasName(ModItems.CRYSTAL_OF_ECLIPSE), has(ModItems.CRYSTAL_OF_ECLIPSE))
                 .save(output, MoreOresModLoader.recipeKey(getSimpleRecipeName(ModItems.ECLIPSE_GEM)));
+
+        shaped(RecipeCategory.COMBAT, ModItems.RADIANT_BOW)
+                .pattern(" ab")
+                .pattern("a b")
+                .pattern(" ab")
+                .define('a', Items.STRING)
+                .define('b', ModItems.ECLIPSE_GEM)
+                .unlockedBy(getHasName(ModItems.ECLIPSE_GEM), has(ModItems.ECLIPSE_GEM))
+                .save(output, ResourceHelper.recipeKey(getSimpleRecipeName(ModItems.RADIANT_BOW)));
+
+        shaped(RecipeCategory.MISC, ModItems.GEM_ARROW)
+                .pattern("###")
+                .pattern("#a#")
+                .pattern("###")
+                .define('a', Items.ARROW)
+                .define('#', ModItemTags.CRYSTALLIZED)
+                .unlockedBy(getHasName(Items.ARROW), has(Items.ARROW))
+                .save(output, ResourceHelper.recipeKey(getSimpleRecipeName(ModItems.GEM_ARROW)));
     }
 
     public void reversibleCompactingRecipe(

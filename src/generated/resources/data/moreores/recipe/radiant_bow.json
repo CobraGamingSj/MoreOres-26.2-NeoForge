@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:string",
+    "b": "moreores:eclipse_gem"
+  },
+  "pattern": [
+    " ab",
+    "a b",
+    " ab"
+  ],
+  "result": {
+    "id": "moreores:radiant_bow"
+  }
+}
