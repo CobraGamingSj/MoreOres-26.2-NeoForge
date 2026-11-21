@@ -38,6 +38,11 @@ public class RadiantBowItem extends ProjectileWeaponItem {
     }
 
     @Override
+    public int getUseDuration(ItemStack itemStack, LivingEntity user) {
+        return 72000;
+    }
+
+    @Override
     public int getBarColor(ItemStack stack) {
         return CommonColors.HIGH_CONTRAST_DIAMOND;
     }
