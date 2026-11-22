@@ -1,4 +1,4 @@
-package org.cobra.moreores.client.gui.screen;
+package org.cobra.moreores.client.gui.widget;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

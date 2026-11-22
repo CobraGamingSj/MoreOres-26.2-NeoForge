@@ -1,4 +1,4 @@
-package org.cobra.moreores.registry;
+package org.cobra.moreores.core.registry;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

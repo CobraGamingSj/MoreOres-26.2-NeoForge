@@ -22,7 +22,7 @@ import net.minecraft.world.level.block.Blocks;
 import org.cobra.moreores.MoreOresModLoader;
 import org.cobra.moreores.data.recipes.GemCrystallizerRecipeBuilder;
 import org.cobra.moreores.data.recipes.GemPurifyingRecipeBuilder;
-import org.cobra.moreores.registry.ResourceHelper;
+import org.cobra.moreores.core.registry.ResourceHelper;
 import org.cobra.moreores.tags.ModItemTags;
 import org.cobra.moreores.world.block.ModBlocks;
 import org.cobra.moreores.world.item.ModItems;

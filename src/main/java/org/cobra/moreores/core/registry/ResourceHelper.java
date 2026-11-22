@@ -1,4 +1,4 @@
-package org.cobra.moreores.registry;
+package org.cobra.moreores.core.registry;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;

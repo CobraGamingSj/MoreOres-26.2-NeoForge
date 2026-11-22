@@ -6,7 +6,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import org.cobra.moreores.MoreOresModLoader;
-import org.cobra.moreores.registry.ResourceHelper;
+import org.cobra.moreores.core.registry.ResourceHelper;
 import org.cobra.moreores.tags.ModItemTags;
 import org.cobra.moreores.world.block.ModBlocks;
 import org.cobra.moreores.world.item.ModItems;

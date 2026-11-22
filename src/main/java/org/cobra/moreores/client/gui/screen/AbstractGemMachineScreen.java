@@ -13,6 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import org.cobra.moreores.MoreOresModLoader;
+import org.cobra.moreores.client.gui.widget.MachineButtonWidget;
 import org.cobra.moreores.networking.block.MachineStatusDataPayload;
 import org.cobra.moreores.world.block.entity.gem.machine.AbstractGemMachineBlockEntity;
 import org.joml.Matrix3x2fStack;

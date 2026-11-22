@@ -5,7 +5,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import org.cobra.moreores.MoreOresModLoader;
-import org.cobra.moreores.registry.ResourceHelper;
+import org.cobra.moreores.core.registry.ResourceHelper;
 import org.cobra.moreores.tags.ModBlockTags;
 import org.cobra.moreores.world.block.ModBlocks;
 

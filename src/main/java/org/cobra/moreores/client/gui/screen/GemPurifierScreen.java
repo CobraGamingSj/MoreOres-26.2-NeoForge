@@ -10,6 +10,7 @@ import net.minecraft.util.CommonColors;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
 import org.cobra.moreores.MoreOresModLoader;
+import org.cobra.moreores.client.gui.widget.FluidWidget;
 import org.cobra.moreores.world.block.entity.gem.machine.GemPurifierBlockEntity;
 
 import java.util.List;

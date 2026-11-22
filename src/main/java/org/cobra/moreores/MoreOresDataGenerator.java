@@ -3,6 +3,7 @@ package org.cobra.moreores;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.advancements.AdvancementProvider;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -27,6 +28,9 @@ public class MoreOresDataGenerator {
         generator.addProvider(true, new AutomatedModelCreator(output));
         generator.addProvider(true, new AutomatedTranslationKeyCreator(output));
         generator.addProvider(true, new AutomatedRecipeCreator.Runner(output, providerCompletableFuture));
+        generator.addProvider(true, new AdvancementProvider(output, providerCompletableFuture, List.of(
+                new AdvancementsCreator.AdvancementsSubCreator()
+        )));
         generator.addProvider(true, new ItemTagGen(output, providerCompletableFuture));
         generator.addProvider(true, new BlockTagGen(output, providerCompletableFuture));
         generator.addProvider(true, new VillagerTradeTagGen(output, providerCompletableFuture));

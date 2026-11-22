@@ -1,4 +1,4 @@
-package org.cobra.moreores.client.gui.screen;
+package org.cobra.moreores.client.gui.widget;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
